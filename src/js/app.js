@@ -2,6 +2,22 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 
+const hiddenElements = document.querySelectorAll('.hidden');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('show')
+        } else {
+            entry.target.classList.remove('show')
+        }
+    })
+});
+hiddenElements.forEach(el => {
+    observer.observe(el);
+})
+
+
+
 const video = document.querySelector('.video');
 const videos = document.querySelectorAll('.video__item');
 const header = document.querySelector('.header');
@@ -115,7 +131,7 @@ window.addEventListener('scroll', () => {
 })
 
 window.addEventListener('load', () => {
-    // window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     video.style.top = `${header.clientHeight + (height / 2)}px`
     center = video.offsetTop - header.clientHeight
     document.querySelector('#video1').classList.add('active');
