@@ -227,7 +227,7 @@ button {
   -webkit-box-shadow: 0 0 30px -15px #00000080;
           box-shadow: 0 0 30px -15px #00000080;
   border-radius: 4px;
-  top: 50%;
+  top: 200%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
