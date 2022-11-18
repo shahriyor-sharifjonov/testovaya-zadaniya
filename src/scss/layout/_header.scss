@@ -1,0 +1,12 @@
+.header{
+    height: 200vh;
+    background: url('../img/noise.png'), rgb(248, 247, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__p{
+        font-size: 120px;
+        line-height: 120%;
+        color: #fff;
+    }
+}
